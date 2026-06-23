@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="dark-theme">
+    <!-- Particle Background -->
+    <canvas id="particles-bg"></canvas>
+    
     <!-- Navigation -->
     <nav class="navbar glass">
         <div class="nav-content">
@@ -46,19 +49,27 @@
                     <a href="https://github.com/anrgya" target="_blank" class="btn btn-secondary">GitHub</a>
                 </div>
             </div>
-            <div class="hero-visual fade-in delay-5">
+            <div class="hero-visual">
                 <div class="orb orb-1"></div>
                 <div class="orb orb-2"></div>
-                <div class="glass-card visual-card">
-                    <div class="code-snippet">
-                        <span class="keyword">import</span> pandas <span class="keyword">as</span> pd<br>
-                        <span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier<br>
-                        <br>
-                        <span class="comment"># Predict user behavior</span><br>
-                        model = RandomForestClassifier()<br>
-                        model.fit(X_train, y_train)<br>
-                        accuracy = model.score(X_test, y_test)<br>
-                        <span class="function">print</span>(f<span class="string">"Accuracy: {accuracy * 100:.2f}%"</span>)
+                <div class="visual-card" id="hero-card">
+                    <div class="card-inner" id="card-inner">
+                        <!-- Front: Code Editor -->
+                        <div class="card-front">
+                            <div class="code-header">
+                                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                                <span class="file-name">render_profile.py</span>
+                            </div>
+                            <div class="code-snippet" id="typewriter-code">
+                                <!-- Code will be typed here by JS -->
+                            </div>
+                        </div>
+                        <!-- Back: Profile Photo -->
+                        <div class="card-back">
+                            <!-- Change 'images/profile.png' to your actual photo filename -->
+                            <img src="images/profile.png" alt="Ghaly Anargya" class="profile-photo" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect width=\'200\' height=\'200\' fill=\'%231a1a2e\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23a1a1aa\' font-family=\'sans-serif\' font-size=\'14\'%3EAdd profile.png%3C/text%3E%3C/svg%3E'">
+                            <div class="photo-glow"></div>
+                        </div>
                     </div>
                 </div>
             </div>
