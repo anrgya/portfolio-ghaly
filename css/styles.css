@@ -644,11 +644,11 @@ ul {
     }
     
     .visual-card {
-        height: 280px;
+        height: 330px;
     }
     
     .visual-card.flipped {
-        height: 380px;
+        height: 420px;
     }
     
     .card-front {
@@ -656,7 +656,7 @@ ul {
     }
     
     .code-snippet {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
     
     .timeline::before { left: 10px; }
